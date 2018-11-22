@@ -98,5 +98,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'io.reactivex.rxjava2:rxjava:2.2.2'
-    implementation project(':mylibrary')
+    implementation project(':module2')
+    implementation project(':module3')
 }

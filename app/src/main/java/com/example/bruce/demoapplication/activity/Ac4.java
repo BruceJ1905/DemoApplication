@@ -15,7 +15,6 @@ import android.webkit.WebViewClient;
 import android.widget.ImageView;
 
 import com.example.bruce.demoapplication.R;
-import com.example.mylibrary.Ac5;
 
 public class Ac4 extends Activity {
     ImageView imageView;
@@ -51,6 +50,9 @@ public class Ac4 extends Activity {
 
 //                Intent intent = new Intent(Ac4.this, MyService.class);
 //                startService(intent);
+
+                Intent intent = new Intent(Ac4.this, com.example.module2.MainActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -60,8 +62,8 @@ public class Ac4 extends Activity {
 //                Bitmap bitmap = activityShot(Ac4.this);
 //                imageView.setImageBitmap(bitmap);
 
-                Intent intent = new Intent(Ac4.this, Ac5.class);
-                startActivity(intent);
+//                Intent intent = new Intent(Ac4.this, Ac5.class);
+//                startActivity(intent);
 
             }
         });
