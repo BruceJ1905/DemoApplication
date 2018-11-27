@@ -23,6 +23,11 @@ android {
 //        flavorDimensions "versionCode"
     }
 
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
     signingConfigs {
 
         debug_sign {
@@ -105,4 +110,7 @@ dependencies {
 
     implementation project(':annotation')
     annotationProcessor project(':apt')
+
+    implementation 'com.jakewharton:butterknife:9.0.0-rc2'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-rc2'
 }

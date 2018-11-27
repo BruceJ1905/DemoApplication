@@ -60,7 +60,7 @@ public class Ac4 extends Activity {
 //                Intent intent = new Intent(Ac4.this, MyService.class);
 //                startService(intent);
 
-                Intent intent = new Intent(Ac4.this, com.example.module2.MainActivity.class);
+                Intent intent = new Intent(Ac4.this, com.example.module2.M2Ac2.class);
                 startActivity(intent);
 
             }

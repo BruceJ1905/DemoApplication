@@ -28,6 +28,11 @@
 
         <activity android:name=".activity.Ac4" >
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
 
@@ -35,11 +40,11 @@
 
         <activity android:name=".activity.AcBind" >
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.AcBuKf" >
+
         </activity>
 
         <service android:name=".service.MyService"
