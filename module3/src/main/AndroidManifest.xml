@@ -1,2 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.module3" />
+    package="com.example.module3" >
+
+
+    <application >
+
+        <activity android:name=".Ac6" />
+
+
+    </application>
+</manifest>

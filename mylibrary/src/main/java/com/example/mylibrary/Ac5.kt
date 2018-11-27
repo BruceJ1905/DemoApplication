@@ -8,5 +8,7 @@ class Ac5 : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.ac5)
+
+
     }
 }

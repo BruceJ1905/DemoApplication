@@ -1,1 +1,1 @@
-include ':app', ':mylibrary', ':module2', ':module3'
+include ':app', ':mylibrary', ':module2', ':module3', ':module4', ':annotation', ':apt'

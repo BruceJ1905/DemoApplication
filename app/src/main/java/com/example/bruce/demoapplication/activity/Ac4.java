@@ -14,8 +14,14 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
 
+import com.example.annotation.MyAnnotation;
 import com.example.bruce.demoapplication.R;
+import com.example.module4.Ac7;
 
+import org.simple.eventbus.EventBus;
+import org.simple.eventbus.Subscriber;
+
+@MyAnnotation
 public class Ac4 extends Activity {
     ImageView imageView;
     WebView webView;
@@ -27,6 +33,9 @@ public class Ac4 extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ac4);
+
+        EventBus.getDefault().register(this);
+
 
         CNT = 20;
 
@@ -53,6 +62,7 @@ public class Ac4 extends Activity {
 
                 Intent intent = new Intent(Ac4.this, com.example.module2.MainActivity.class);
                 startActivity(intent);
+
             }
         });
 
@@ -64,7 +74,6 @@ public class Ac4 extends Activity {
 
 //                Intent intent = new Intent(Ac4.this, Ac5.class);
 //                startActivity(intent);
-
             }
         });
 
@@ -74,6 +83,12 @@ public class Ac4 extends Activity {
 //        Log.d("intent", v2);
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);
+
+    }
 
     public static Bitmap activityShot(Activity activity) {
         /*获取windows中最顶层的view*/
@@ -120,9 +135,23 @@ public class Ac4 extends Activity {
     }
 
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
 
+    @Subscriber(tag = "m2")
+    void onModule2Msg(String msg) {
+        Log.d("11", "msg from module2 " + msg);
 
+        Intent intent = new Intent(Ac4.this, Ac7.class);
+        startActivity(intent);
+    }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {

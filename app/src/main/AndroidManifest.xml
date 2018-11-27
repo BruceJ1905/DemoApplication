@@ -13,11 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-
+<!--
         <meta-data
             android:name="UMENG_CHANNEL"
             android:value="${UMENG_CHANNEL_VALUE}">
-        </meta-data>
+        </meta-data>-->
 
         <activity
             android:name=".activity.MainActivity"
@@ -27,15 +27,20 @@
         </activity>
 
         <activity android:name=".activity.Ac4" >
+
+
+        </activity>
+
+        <activity android:name=".activity.Ac3" />
+
+        <activity android:name=".activity.AcBind" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-
-        <activity android:name=".activity.Ac3" />
 
         <service android:name=".service.MyService"
             android:exported="true" >
