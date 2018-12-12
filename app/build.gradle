@@ -38,14 +38,7 @@ android {
             v2SigningEnabled false
         }
 
-        reader_sign {
-            keyAlias 'iqiyireader'
-            keyPassword 'I*ftnQ@27'
-            storeFile file('/Users/bruce/develop/key/QiyiReaderReleaseKey')
-            storePassword 'I*ftnQ@27'
-            v2SigningEnabled false
 
-        }
     }
 
     buildTypes {
