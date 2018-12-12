@@ -55,13 +55,13 @@ public class Ac4 extends Activity {
             @Override
             public void onClick(View v) {
 //                webView.loadUrl("https://wenxue.iqiyi.com/");
-//                webView.loadUrl("https://wwww.baidu.com/");
+                webView.loadUrl("https://wwww.baidu.com/");
 
 //                Intent intent = new Intent(Ac4.this, MyService.class);
 //                startService(intent);
 
-                Intent intent = new Intent(Ac4.this, com.example.module2.M2Ac2.class);
-                startActivity(intent);
+//                Intent intent = new Intent(Ac4.this, com.example.module2.M2Ac2.class);
+//                startActivity(intent);
 
             }
         });

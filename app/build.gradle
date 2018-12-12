@@ -20,7 +20,7 @@ android {
             }
         }
 
-//        flavorDimensions "versionCode"
+        flavorDimensions "versionCode"
     }
 
     compileOptions {
@@ -67,11 +67,17 @@ android {
     dataBinding {
         enabled = true;
     }
-//    productFlavors {
-//        wandoujia {}
-//        baidu {}
-//        xiaomi {}
-//    }
+    productFlavors {
+        wandoujia {
+            buildConfigField "String", "READER_CHANNEL", "\"1234qwer\""
+        }
+        baidu {
+            buildConfigField "String", "READER_CHANNEL", "\"5678asdf\""
+        }
+        xiaomi {
+            buildConfigField "String", "READER_CHANNEL", "\"1289zxcv\""
+        }
+    }
 //    productFlavors.all { flavor ->
 //        flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name] //动态地修改AndroidManifest中的渠道名
 //    }
